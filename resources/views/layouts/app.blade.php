@@ -21,22 +21,22 @@
 </head>
 <body>
     <div id="app">
-        <nav class="nav has-shadow">
-            <div class="container">
-                <div class="nav-left">
-                    <a class="nav-item" href="{{route('home')}}">
-                        <img src="{{asset('images/Chris_Black_logo.png')}}" alt="CBlack logo" width="100px" height="200px"/>
+        <nav class="navbar-menu has-shadow">
+            <div class="navbar-start container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="{{route('home')}}">
+                        <img src="{{asset('images/Chris_Black_logo2.png')}}" alt="CBlack logo" width="218" height="300" />
                     </a>
-                    <a href="" class="nav-item is-tab is-hidden-mobile m-l-10">Blog</a>
-                    <a href="" class="nav-item is-tab is-hidden-mobile">Resources</a>
+                    <a href="" class="navbar-item is-tab is-hidden-mobile m-l-10">Blog</a>
+                    <a href="" class="navbar-item is-tab is-hidden-mobile">Resources</a>
                 </div>
-                <div class="nav-right is-right">
+                <div class="navbar-end is-right">
                     <!--  Not sure if I will end up using this sort of log in as I wont have other users  -->
                     @if(Auth::guest())
-                        <a href="" class="nav-item is-tab">Login</a>
-                        <a href="" class="nav-item is-tab">Sign up</a>
+                        <a href="" class="navbar-item is-tab">Login</a>
+                        <a href="" class="navbar-item is-tab">Sign up</a>
                     @else
-                        <button class="dropdown is-aligned right nav-item is-tab">
+                        <button class="dropdown is-aligned right navbar-item is-tab">
                             Hey Jimmy <span class="icon"><i class="fa fa-caret-dowm"></i></span>
 
                             <ul class="dropdown-menu">
