@@ -33,8 +33,8 @@
                 <div class="navbar-end is-right">
                     <!--  Not sure if I will end up using this sort of log in as I wont have other users  -->
                     @if(Auth::guest())
-                        <a href="" class="navbar-item is-tab">Login</a>
-                        <a href="" class="navbar-item is-tab">Sign up</a>
+                        <a href="{{route('login')}}" class="navbar-item is-tab">Login</a>
+                        <a href="{{route('register')}}" class="navbar-item is-tab">Sign up</a>
                     @else
                         <button class="dropdown is-aligned right navbar-item is-tab">
                             Hey Jimmy <span class="icon"><i class="fa fa-caret-dowm"></i></span>
