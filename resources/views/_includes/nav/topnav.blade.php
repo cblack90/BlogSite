@@ -27,7 +27,7 @@
                                     <a href="" class="navbar-item">Settings</a>
                                     <a href="{{route('manage.dashboard')}}" class="navbar-item">Manage</a>
                                     <hr class="navbar-divider"></hr>
-                                    <a href="" class="navbar-item">Logout</a> 
+                                    <a href="{{ url('/logout')}}" class="navbar-item">Logout</a> 
                             </div>
                         </div>
                     @endif

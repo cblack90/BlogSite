@@ -24,3 +24,4 @@ Route::prefix('manage')->middleware('auth')->group(function(){
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'Auth\LoginController@logout');
