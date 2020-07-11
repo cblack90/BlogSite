@@ -12,7 +12,10 @@
     "devDependencies": {
         "axios": "^0.19",
         "bootstrap": "^4.0.0",
+        "buefy": "^0.8.20",
+        "bulma": "^0.9.0",
         "cross-env": "^7.0",
+        "font-awesome": "^4.7.0",
         "jquery": "^3.5.1",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.13",
@@ -23,9 +26,5 @@
         "vue": "^2.6.11",
         "vue-template-compiler": "^2.6.10"
     },
-    "dependencies": {
-        "buefy": "^0.8.20",
-        "bulma": "^0.9.0",
-        "font-awesome": "^4.7.0"
-    }
+    "dependencies": {}
 }

@@ -21,57 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar-menu has-shadow">
-            <div class="navbar-start container">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="{{route('home')}}">
-                        <img src="{{asset('images/Chris_Black_logo2.png')}}" alt="CBlack logo" width="218" height="300" />
-                    </a>
-                    <a href="" class="navbar-item is-tab is-hidden-mobile m-l-10">Blog</a>
-                    <a href="" class="navbar-item is-tab is-hidden-mobile">Resources</a>
-                </div>
-                <div class="navbar-end is-right">
-                    <!--  Not sure if I will end up using this sort of log in as I wont have other users  -->
-                    @if(Auth::guest())
-                        <a href="{{route('login')}}" class="navbar-item is-tab">Login</a>
-                        <a href="{{route('register')}}" class="navbar-item is-tab">Sign up</a>
-                    @else
-                        <div class="dropdown is-hoverable is-aligned right navbar-item is-tab">
-                            <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Hello Chris</span> <!-- Figure out to grab the user name. its just me, but a good practice to learn -->
-                                <span class="icon is-small"><i><fa-angle-down aria-hidden="true"></i></span>
-                                </button>
-                            </div>
-                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                                <div class="dropdown-content">
-                                    <ul class="m-l-15">
-                                        <li><a href="" class="dropdown-item">Profile</a></li>
-                                        <li><a href="" class="dropdown-item">Notification</a></li>
-                                        <li><a href="" class="dropdown-item">Settings</a></li>
-                                        <li><a href="{{route('manage.dashboard')}}" class="dropdown-item">Manage</a></li>
-                                        <li><hr class="drowdown-divider"></hr></li>
-                                        <li><a href="" class="dropdown-item">Logout</a></li>
-                                    </ul>  
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                           <!-- <span class="icon"><i class="fa fa-caret-dowm"></i></span>
-
-                            <ul class="dropdown-menu">
-                                <li><a href="">Profile</a></li>
-                                <li><a href="">Notification</a></li>
-                                <li><a href="">Settings</a></li>
-                                <li class="seperator"></li>
-                                <li><a href="">Logout</a></li>
-                            </ul>
-                        </button>-->
-                    @endif
-                </div>
-            </div>
-        </nav>
+        @include('_includes.nav.topnav')
         <main class="py-4">
             @yield('content')
         </main>

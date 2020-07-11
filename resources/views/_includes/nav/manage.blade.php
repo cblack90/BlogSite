@@ -1,5 +1,5 @@
-<div class="side-menu">
-    <aside class="menu m-t-30 m-l-10">
+<!--<div class="side-menu"> side-menu-->
+    <aside class="menu m-t-30 m-l-10"> 
         <p class="menu-label">
             General
         </p>
@@ -14,4 +14,4 @@
             <li><a href="#">Resource Admin</a></li>
         </ul>
     </aside>
-</div>
+<!--</div>-->
