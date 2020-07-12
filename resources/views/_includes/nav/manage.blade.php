@@ -4,14 +4,14 @@
             General
         </p>
         <ul class="menu-list">
-            <li><a href="{{route('manage.dashboard')}}">Dashboard</a></li>
+            <li><a href="{{route('manage.dashboard')}}" class="{{Nav::isRoute('manage.dashboard')}}">Dashboard</a></li>
         </ul>
         <p class="menu-label">
-            Administration
+            Content
         </p>
         <ul class="menu-list">
-            <li><a href="#">Blog Admin</a></li>
-            <li><a href="#">Resource Admin</a></li>
+            <li><a href="{{route('posts.index')}}" class="{{Nav::isResource('posts',2)}}">Blog Admin</a></li>
+            <li><a href="#" class="{{Nav::isRoute('')}}">Resource Admin</a></li>
         </ul>
     </aside>
 </div>
