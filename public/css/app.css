@@ -9869,7 +9869,7 @@ a.navbar-item.is-active,
 }
 
 .navbar-item img {
-  max-height: 1.75rem;
+  max-height: 2.8rem;
 }
 
 .navbar-item.has-dropdown {
@@ -21986,52 +21986,51 @@ a.is-muted:hover {
   color: grey;
 }
 
-.dropdown {
-  position: relative;
-}
+/*.dropdown{
+    position: relative;
 
-.dropdown .dropdown-menu {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 102%;
-  z-index: 1000;
-  background-color: white;
-  min-width: 200px;
-  text-align: left;
-  box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
-}
+    .dropdown-menu{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 102%;
+        z-index: 1000;
+        background-color: white;
+        min-width: 200px;
+        text-align: left;
+        box-shadow: 0 0 1px rgba(57,70,78,.15), 0 20px 55px -8px rgba(57,70,78,.25);
+        li{
+            &.seperator{
+                border: 1px solid #ccc;
+                margin: 5px 0;
+            }
+            &>a{
+                margin: 5px 0;
+                padding: 5px 0 5px 10px;
+                display: block;
+                &:hover{
+                    background-color: whitesmoke;
+                }
+            }
+        }
+    }
+    &.is-aligned-right .dropdown-menu{
+        right: 0;
+        left: auto;
+    }
 
-.dropdown .dropdown-menu li.seperator {
-  border: 1px solid #ccc;
-  margin: 5px 0;
-}
-
-.dropdown .dropdown-menu li > a {
-  margin: 5px 0;
-  padding: 5px 0 5px 10px;
-  display: block;
-}
-
-.dropdown .dropdown-menu li > a:hover {
-  background-color: whitesmoke;
-}
-
-.dropdown.is-aligned-right .dropdown-menu {
-  right: 0;
-  left: auto;
-}
-
-.dropdown.is-open .dropdown-menu {
-  display: block;
-}
-
-/*.nav {
-    height: 4.5rem;
-}
-.nav-item img{
-    max-height: 2.8rem;
+    &.is-open .dropdown-menu{
+        display: block;
+    }
 }*/
+
+.nav {
+  height: 4.5rem;
+}
+
+.nav-item img {
+  max-height: 2.8rem;
+}
 
 .m-t-5 {
   margin-top: 5px !important;
@@ -22417,11 +22416,104 @@ a.is-muted:hover {
   padding-right: 100px !important;
 }
 
-.side-menu {
+/*.side-menu{
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    background-color: white;
+    overflow-y: scroll;
+}*/
+
+#admin-side-menu {
   position: fixed;
-  height: 100vh;
+  top: 4em;
+  left: -200px;
+  bottom: 0px;
   width: 200px;
   background-color: white;
   overflow-y: scroll;
+  z-index: 100;
+  transition: left 0.3s ease-in-out;
+}
+
+.management-area {
+  top: 4rem;
+  right: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .management-area {
+    position: absolute;
+    left: 200px;
+  }
+}
+
+.flex-container {
+  margin: 10px 25px;
+}
+
+.widget-area {
+  min-height: 75px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+}
+
+.widget-area.author-widget .selected-author {
+  display: flex;
+  align-items: flex-start;
+}
+
+.widget-area.author-widget .selected-author img {
+  border-radius: 25 px;
+}
+
+.widget-area.author-widget .selected-author .author {
+  margin: auto 0 auto 10px;
+}
+
+.widget-area.post-status-widget .status {
+  display: flex;
+  align-items: flex-start;
+}
+
+.widget-area.post-status-widget .status .status-icon {
+  min-width: 50px;
+}
+
+.widget-area.post-status-widget .status .status-icon .icon {
+  width: 100%;
+}
+
+.widget-area.post-status-widget .status .status-icon .icon i {
+  text-align: center;
+}
+
+.widget-area.post-status-widget .status .status-details {
+  margin-left: 10px;
+}
+
+.widget-area.post-status-widget .status .status-details h4 {
+  font-weight: 400;
+}
+
+.widget-area.post-status-widget .status .status-details h4 span.status-emphais {
+  font-weight: 800;
+}
+
+.widget-area.post-status-widget .status .status-details p {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+.widget-area.publish-buttons-widget {
+  display: flex;
+  align-items: flex-start;
+  min-height: 50 px;
+}
+
+.widget-area.publish-buttons-widget .primary-action-button,
+.widget-area.publish-buttons-widget .secondary-action-button {
+  flex: 1;
+  margin: 10px;
 }
 

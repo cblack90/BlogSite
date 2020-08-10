@@ -2,7 +2,7 @@
             <div class="navbar-start container">
                 <div class="navbar-brand">
                     <a class="navbar-item" href="{{route('home')}}">
-                        <img src="{{asset('images/Chris_Black_logo2.png')}}" alt="CBlack logo" width="218" height="300" />
+                        <img src="{{asset('images/ChrisBlack-logo-horiz.svg')}}" alt="CBlack logo" width="250"/>
                     </a>
                     <a href="" class="navbar-item is-tab is-hidden-mobile m-l-10">Blog</a>
                     <a href="" class="navbar-item is-tab is-hidden-mobile">Resources</a>

@@ -9,24 +9,25 @@
 
     <title>Dashboard</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles')
 </head>
 <body>
+    @include('_includes.nav.topnav')
     
-    <div id="app">
-        @include('_includes.nav.topnav')
-        @include('_includes.nav.manage')
-        <main class="py-4">
+    <div class="columns">
+    @include('_includes.nav.manage')
+        <div class="management-area column is-main-content" id="app">
             @yield('content')
-        </main>
+        </div>
     </div>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    @yield('scripts')
 </body>
 </html>
